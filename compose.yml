@@ -1,0 +1,13 @@
+services:
+  proxmox:
+    build:
+      context: .
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    environment:
+      - MEM=6G
+    volumes:
+     - ./image.qcow2:/image
