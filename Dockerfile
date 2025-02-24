@@ -14,14 +14,16 @@ RUN apt update && apt -y upgrade && \
         socat \
         mtr-tiny \
         micro \
-        dnsmasq \
+
+#        dnsmasq \
+
         openssh-client \
     && apt clean
 
 COPY run.sh /run/
 
-COPY dnsmasq.conf /etc/dnsmasq.conf
-RUN mkdir -p /var/log/dnsmasq
+#COPY dnsmasq.conf /etc/dnsmasq.conf
+#RUN mkdir -p /var/log/dnsmasq
 
 VOLUME /image
 
