@@ -14,7 +14,7 @@ then
 fi
 
 intf_number=0
-interfaces=$(ip -json a | jq -r '.[] | .ifname')
+interfaces=$(ip -json a | jq -r '.[] | .ifname' | sort)
 
 INTERFACES=""
 INTERFACES_NB=0
