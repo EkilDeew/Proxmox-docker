@@ -2,6 +2,8 @@ services:
   proxmox:
     build:
       context: .
+    stdin_open: true
+    tty: true
     cap_add:
       - NET_ADMIN
     devices:
